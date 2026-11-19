@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Extract project
-        run: unzip -q tarikhnegar-android-project-v8.zip
+        run: unzip -q tarikhnegar-android-project.zip
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -28,7 +28,7 @@ jobs:
         run: |
           SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
           yes | "$SDKMANAGER" --licenses
-          "$SDKMANAGER" "platforms;android-35" "build-tools;35.0.0"
+          "$SDKMANAGER" "platforms;android-36" "build-tools;36.0.0"
 
       - uses: gradle/actions/setup-gradle@v4
         with:
