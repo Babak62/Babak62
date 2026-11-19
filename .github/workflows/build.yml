@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'tarikhnegar-android-project.zip'
+      - 'tarikhnegar-android-project(4).zip'
       - '.github/workflows/build.yml'
 
 permissions:
@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Extract project
-        run: unzip -q tarikhnegar-android-project.zip
+        run: unzip -q "tarikhnegar-android-project(4).zip"
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
